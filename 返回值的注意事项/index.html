@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // return 会终止函数 
+        function getSum(num1, num2) {
+            return num1 + num2;         //return 后面的代码不会执行 
+            alert('我不会被执行');
+        }
+        console.log(getSum(1, 2));
+        //2. return只能返回一个值 
+
+        function fn(num1, num2) {
+            return num1, num2;      //最终返回最后一个值
+        }
+        console.log(fn(1, 2));
+
+        // 3. 求任意两个数的加减乘除
+
+
+        /*      function clc(num1,num2){
+                 var arr = [];
+                 arr[0] = '相加为：'+(num1+num2);
+                 arr[1] = '相减为：'+(num1-num2);
+                 arr[2] = '相乘为：'+(num1*num2);
+                 arr[3] = '相除为：'+(num1/num2);
+                 return arr;
+             } */
+
+       /*  function clc(num1, num2) {
+            return [num1 + num2, num1 - num2, num1 * num2, num1 / num2];
+        }
+        do {
+            var Inp1 = parseInt(prompt('请输入要计算的第一个值：'));
+            var Inp2 = parseInt(prompt('请输入要计算的第二个值：'));
+
+            var re = clc(Inp1, Inp2);
+            console.log(re);
+            for (let i = 0; i < re.length; i++) {
+                switch (i) {
+                    case 0:
+                        var ea = '相加的结果为：' + re[i]+'\n';
+                        break;
+                    case 1:
+                        var eb = '相减的结果为：' + re[i]+'\n';
+                        break;
+                    case 2:
+                        var ec = '相乘的结果为：' + re[i]+'\n';
+                        break;
+                    case 3:
+                        var ed = '相除的结果为：' + re[i]+'\n';
+                        break;
+                }
+            }
+            var info = alert(ea+eb+ec+ed);
+            var quit = prompt('是否开始计算？')
+        } while (quit == '是');
+ */
+
+        //函数没有return 返回 undefined；
+    </script>
+</body>
+
+</html>

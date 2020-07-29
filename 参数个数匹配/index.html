@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //函数形参实参个数匹配
+        function setSum(num1,num2){
+            console.log(num1+num2);
+        }
+        //1. 实参的个数与形参相同 正常输出
+        setSum(1,2);
+        //2. 实参的个数比形参要多   取几个实参 取决于 形参的个数
+        setSum(1,2,3);
+        //3. 如果实参的个数小于形参的个数 
+        // 输出NaN 形参可以看作是不用声明的变量     num2 是一个变量却没有值 所以num2 为undifined； 数字+ undifined 等于 NaN;
+        setSum(1);
+    </script>
+</body>
+</html>

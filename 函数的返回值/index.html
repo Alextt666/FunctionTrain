@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 函数是做某件事 或者实现某种功能 
+        // 函数返回值的格式
+
+/*         function 函数名(){
+            return 需要返回的结果;
+        }
+        函数名(); // return  返回的结果给 调用者；
+ */
+        //只要函数遇到 return 就把后面的结果 返回给函数的调用者 函数名() = return后面的结果
+        // 代码验证
+
+        function cook(aru){
+            return aru;
+        }
+        console.log(cook('肘子'));
+
+        //举例 2 
+        // 求任意两个数的和
+
+        function getSum (num1,num2){
+            return num1 + num2;
+        }
+        console.log(getSum(1,2));
+
+        // 练习1 利用函数比较两个数的大小 
+
+        function compare(num1,num2){
+            return num1>num2?num1:num2;
+        }
+        console.log('比较大的数字是：'+compare(2,4));
+
+        //练习2 利用函数求任意一个数组中的最大值 [5,2,99,101,67,77]
+        var arr = [5,2,99,101,67,77];
+        function getMax(ar){
+            let num = null;
+            for (let i = 0; i<ar.length; i++){
+                if (ar[i]>num){
+                    num = ar[i];
+                }
+            }
+            return num;
+        }
+        var re = getMax(arr);//在实际开发中 使用一个变量存储 返回结果 
+        console.log(re);
+    </script>
+</body>
+
+</html>

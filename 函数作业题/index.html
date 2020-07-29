@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  作业题
+        //  
+        //  1.写一个函数 用户输入任意两个数字的任意算数运算，弹出运算后的结果
+
+
+        // var num1 = prompt('第一个数：');
+        // var symb = prompt('+-*/?');
+        // var num2 = prompt('第二个数：');
+        // function getSum(num1, num2) {
+        //     var sum = 0;
+        //     if (symb == '+') {
+        //         sum = parseInt(num1)+parseInt(num2);
+        //     }
+        //     else if (symb == '-') {
+        //         sum = num1 - num2;
+        //     }
+        //     else if (symb == '*') {
+        //         sum = num1 * num2
+        //     }
+        //     else {
+        //         sum = num1 / num2;
+        //     };
+        //     return sum;
+        // }
+        // alert('计算结果为：' + getSum(num1,num2));
+
+
+        //  2.写一个函数  用户输入任意两个数 比较最大值 弹出运算后的结果
+
+        // var num1 = parseInt(prompt('第一个数：'));
+        // var num2 = parseInt(prompt('第二个数：'));
+        // function compare(num1,num2){
+        //     return num1>num2?num1:num2;
+        // }
+        // alert('比较大的数是：'+compare(num1,num2));
+
+
+        //  3.写一个函数  用户输入任意3个数 比较最大值 弹出运算后的结果
+
+        // var num1 = prompt('第一个：')
+        // var num2 = prompt('第二个：')
+        // var num3 = prompt('第三个：')
+        // function compare (num1,num2,num3){
+        //     num1 = parseInt(num1);
+        //     num2 = parseInt(num2);
+        //     num3 = parseInt(num3);
+        //     if(num1>num2&&num1>num3){
+        //         return num1;
+        //     }
+        //     else if(num2>num1&&num2>num3){
+        //         return num2
+        //     }
+        //     else {
+        //         return num3
+        //     }
+        // }
+        // alert('最大的是：'+compare(num1,num2,num3));
+
+        //  4.写一个函数   用户输入一个数 判断是否为素数（只能被1和自身整除的数） 并弹出返回值；
+            var num = parseInt(prompt('请输入一个数：')); //5 num =5
+            function judgeSu (num){                     //num =5
+                let sum = 0;                              //sum = 0
+                for(let i = 2;i<=num-1;i++){               // 2 ~ num-1    2~4  i = 2  i=3  i=4;
+                    if(num%i == 0){                         //i =2  5对2 取余 != 0 ; 
+                        sum = num;
+                        break;
+                    }
+                }
+                if(sum != true&&sum>0){                        // sum = 4 ; sum =true;
+                    return '这个数不是素数';
+                }
+                else {
+                    return '这个数是素数';
+                }
+            }
+            alert(judgeSu(num));
+    </script>
+</body>
+
+</html>

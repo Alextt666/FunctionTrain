@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.利用函数封装的方式 翻转任意数组；
+
+
+        /*  function reverse(arr){
+             var newArr = [];
+             for (let i = arr.length-1;i>=0;i--){
+                 newArr[newArr.length] = arr[i] 
+             }
+             return newArr;
+         }
+         var arr1  = reverse([1,2,3,4,5])
+         console.log(arr1); */
+
+         // 2.利用函数封装 实现排序 [5,1,2,4,3]
+
+        /*  function sort(arr){
+                for (let i = 0;i<arr.length-1;i++){
+                    for (let j = 0;j<arr.length-1-i;j++){
+                        if(arr[j]>arr[j+1]){
+                            let temp = arr[j];
+                            arr[j]=arr[j+1];
+                            arr[j+1]=temp;
+                        }
+                    }
+                }
+                return arr;
+         }
+         var arr1 = sort([5,2,6,1,7]);
+         console.log(arr1); */
+
+         // 输入年份 判断是否闰年
+
+         /* function year(num){
+                if(num%4==0&&num%100!=0 || num%400==0){
+                    return num+'是闰年'
+                }
+                else{
+                    return num+'不是闰年'
+                }
+         }
+         console.log(year(1997)); */
+
+         //改进版
+
+         function isRun(year){
+             var run = false;
+             if(year%4==0&&year%100!=0 || year%400==0){
+                 run = true;
+             }
+             return run;
+         }
+         
+
+
+         //函数的调用       让用户输入一个年份返回 这个年份2月有多少天
+
+         function backDay(){
+             var yearIN = prompt('请输入一个年份');
+             var result=isRun(yearIN);
+             return  result?'有28天':'有29天';
+         }
+         console.log(backDay());
+    </script>
+</body>
+</html>
